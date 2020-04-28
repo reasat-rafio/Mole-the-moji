@@ -1,0 +1,89 @@
+html{
+    box-sizing: border-box;
+    font-size: 10px;
+    background: rgb(0, 191, 255);
+}
+
+*, *::after, *::before{
+    box-sizing: inherit;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h1{
+    text-align: center;
+    font-size: 45px;
+}
+
+button {
+    display: block;
+    margin: auto;
+  z-index: 10000;
+}
+
+.game {
+    display: flex;
+    height: 600px;
+    width: 800px;
+    margin: 10px auto;
+    flex-wrap: wrap;
+}
+
+.hole {
+    overflow: hidden;
+    flex: 1 0 30%;
+    position: relative;
+}
+
+.hole::after{
+    display: block;
+    background:url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffreepikpsd.com%2Fwp-content%2Fuploads%2F2019%2F11%2FBush_Green_Shrub_Grass_Lush_74806-001-Transparent-Png-Images.png&f=1&nofb=1")bottom center no-repeat;
+    background-size: contain;
+    content: "";
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    z-index: 2;
+    bottom: -30px;
+    z-index: 100;
+}
+
+.mole {
+    background: url("52449473_332210410747673_662673617951129600_n-cutout.png") bottom center no-repeat;
+    background-size: 60%;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s;
+    z-index: 10;
+}
+
+.hole:hover .mole{
+    opacity: 0.9;
+}
+
+.hole.up .mole{
+    top: 0;
+}
+
+.pan {
+    position: absolute;
+    height: 120px;
+    background: transparent;
+    display: none;
+}
+
+body.cross {
+    cursor: none;
+}
+
+body.cross .pan{
+    display: block;
+    z-index: 9;
+}
+
