@@ -9,7 +9,6 @@ let lastHole;
 let timeUp = false
 let score = 0
 
-
 function randomTime(min, max) {
     return Math.round(Math.random() * (max - min) + min)
 }
@@ -53,7 +52,7 @@ function startGame() {
     scoreBoard.textContent = 0;
     timeUp = false
     peep()
-    setTimeout(() => timeUp = true, 10000)
+    setTimeout(() => timeUp = true, 30000)
 }
 
 function pewpew(e) {

@@ -20,9 +20,18 @@ h1{
 }
 
 button {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px 20px;
     display: block;
     margin: auto;
   z-index: 10000;
+  cursor: pointer;
+}
+button:hover {
+    background: black;
+    color: white;
 }
 
 .game {
@@ -86,4 +95,3 @@ body.cross .pan{
     display: block;
     z-index: 9;
 }
-
